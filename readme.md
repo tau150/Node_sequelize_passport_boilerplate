@@ -1,4 +1,4 @@
-# Node and Sequelize Boiporlate with token auth using passport
+# Node and Sequelize Boilerplate with token auth using passport
 
 ## Installing packages.
 
@@ -20,7 +20,7 @@ npm install
 
 ## .ENV file
 
-In the root of the project you have to create a new file called .env and complete following .env.example file, in this file you will config como enviorement variables like db connection.
+In the root of the project you have to create a new file called .env and complete it following .env.example file, in this file you will config como enviorement variables like db connection.
 
 ## Creating the Database
 
@@ -28,7 +28,7 @@ Before start the project you have to create a postgres database with the name th
 
 ## Running migrations.
 
-This projects had two tables, one for uses and one for roles, to generate these tables it is necessary to run the following command:
+This projects has two tables, one for users and one for roles, to generate these tables it is necessary to run the following command:
 
 ```
 sequelize db:migrate
@@ -42,7 +42,7 @@ sequelize db:migrate:undo:all
 
 ## Running seeds.
 
-As tables, there are tow seeds files to generage faker data, you can run them with the following command.
+There are two seeds files to generage faker data, you can run them with the following command.
 
 - User test@mail.com is migrated with password: "123"
 
