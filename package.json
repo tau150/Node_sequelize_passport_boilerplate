@@ -1,5 +1,5 @@
 {
-  "name": "encuestadores-node",
+  "name": "node_sequelize_boiporlate",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,15 +7,24 @@
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^6.0.0",
+    "errorhandler": "^1.5.0",
     "express": "~4.16.0",
+    "express-jwt": "^5.3.1",
     "faker": "^4.1.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.3.0",
     "morgan": "~1.9.0",
     "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.3",
     "sequelize": "^4.37.10",
-    "sequelize-cli": "^4.0.0"
+    "sequelize-cli": "^4.0.0",
+    "winston": "^3.0.0"
   }
 }

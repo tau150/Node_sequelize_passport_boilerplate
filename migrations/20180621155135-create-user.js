@@ -9,15 +9,18 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      firstName: {
         type: Sequelize.STRING
       },
-      surname: {
+      lastName: {
         type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING,
         unique: true
+      },
+      img: {
+        type: Sequelize.STRING
       },
       password: {
         type: Sequelize.STRING
@@ -31,14 +34,9 @@ module.exports = {
           key: "id"
         }
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
+      created_at: Sequelize.DATE,
+      updated_at: Sequelize.DATE,
+      deleted_at: Sequelize.DATE
     });
   },
   down: (queryInterface, Sequelize) => {

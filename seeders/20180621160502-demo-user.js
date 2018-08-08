@@ -1,5 +1,5 @@
 "use strict";
-
+const bcrypt = require("bcryptjs");
 const faker = require("faker");
 
 module.exports = {
@@ -20,24 +20,23 @@ module.exports = {
     const seeder = () => {
       for (var i = 0; i <= 50; i++) {
         users.push({
-          name: faker.name.firstName(),
-          surname: faker.name.lastName(),
+          firstName: faker.name.firstName(),
+          lastName: faker.name.lastName(),
           email: faker.internet.email(),
-          password: faker.internet.password(),
-          role_id: 1,
-          createdAt: new Date(),
-          updatedAt: new Date()
+          password: bcrypt.hashSync(
+            faker.internet.password(),
+            bcrypt.genSaltSync(10)
+          ),
+          role_id: 1
         });
       }
 
       users.push({
-        name: "santi",
-        surname: "nunez",
-        email: "tau150@hotmail.com",
-        password: "123",
-        role_id: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        firstName: "santi",
+        lastName: "nunez",
+        email: "test@mail.com",
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(10)),
+        role_id: 1
       });
     };
 

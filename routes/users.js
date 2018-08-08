@@ -1,16 +1,9 @@
 var express = require("express");
 var router = express.Router();
-const { User } = require("../models/index");
+const users = require("../controllers/UserController");
+var auth = require("../middlewares/auth");
 
-/* GET users listing. */
-router.get("/", function(req, res, next) {
-  // User.findAll().then(users => {
-  //   console.log(users);
-  // });
-
-  User.findAll().then(users => {
-    res.json(users);
-  });
-});
+router.post("/", [], users.create);
+router.post("/login", [], users.login);
 
 module.exports = router;
