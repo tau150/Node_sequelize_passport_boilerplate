@@ -16,7 +16,13 @@ module.exports = (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        set(val) {
+          this.setDataValue("email", val.trim());
+        },
+        validate: {
+          isEmail: true
+        }
       },
       img: {
         type: DataTypes.STRING

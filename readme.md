@@ -6,6 +6,12 @@ To run correctly this project you must to install the following libraries with t
 
 - Install Postgres
 
+- Install Postgres package
+
+```
+npm install -g pg
+```
+
 - Install sequelize cli - ORM for MySql and Postgres
 
 ```
